@@ -40,7 +40,7 @@ require_once ('../../db/dbhelper.php');
 				<h2 class="text-center">Quản Lý Phòng</h2>
 			</div>
 			<div class="panel-body">
-			<a href="add.php">
+			<a href="addp.php">
 					<button class="btn btn-success" style="margin-bottom: 15px;">Đặt phòng</button>
 				</a>
 				<table class="table table-bordered table-hover">
