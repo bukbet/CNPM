@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 01, 2021 at 02:02 AM
+-- Generation Time: Apr 07, 2021 at 03:24 AM
 -- Server version: 8.0.21
 -- PHP Version: 7.3.21
 
@@ -24,6 +24,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `hoadon`
+--
+
+DROP TABLE IF EXISTS `hoadon`;
+CREATE TABLE IF NOT EXISTS `hoadon` (
+  `IDHD` int NOT NULL AUTO_INCREMENT,
+  `thoigian` timestamp NULL DEFAULT NULL,
+  `giatien` int DEFAULT NULL,
+  `Idp` int DEFAULT NULL,
+  `Idk` int DEFAULT NULL,
+  PRIMARY KEY (`IDHD`),
+  KEY `Idp` (`Idp`),
+  KEY `Idk` (`Idk`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `hoadon`
+--
+
+INSERT INTO `hoadon` (`IDHD`, `thoigian`, `giatien`, `Idp`, `Idk`) VALUES
+(1, '2021-04-06 17:00:00', 60000, 1, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `khach`
 --
 
@@ -37,14 +62,14 @@ CREATE TABLE IF NOT EXISTS `khach` (
   `time` int DEFAULT NULL,
   `room` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `khach`
 --
 
 INSERT INTO `khach` (`id`, `hoten`, `diachi`, `sdt`, `date`, `time`, `room`) VALUES
-(1, 'Nguyễn Văn A', 'Lào Cai', 558496514, '2021-03-23 01:57:36', 7, 1),
+(1, 'Nguyễn Văn b', 'Lào Cai', 558496514, '2021-04-13 17:00:00', 7, 1),
 (2, 'Mai Thị B', 'HCM', 4356234, '2021-03-23 01:58:40', 2, 2),
 (3, 'Đặng Văn C', 'Hà Nội', 23452345, '2021-03-25 01:59:01', 5, 3),
 (7, 'Lò Thị E', 'Hải Phòng', 46698456, '2021-03-08 17:00:00', 2, 4);
@@ -67,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `sdt` int NOT NULL,
   `chucvu` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `login`
